@@ -1,0 +1,30 @@
+# open_manipulator:
+# Publish all joint states -----------------------------------
+open_manipulator/joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 1000
+
+# Position Controllers ---------------------------------------
+open_manipulator/joint1_position:
+  type: position_controllers/JointPositionController
+  joint: joint1
+
+open_manipulator/joint2_position:
+  type: position_controllers/JointPositionController
+  joint: joint2
+
+open_manipulator/joint3_position:
+  type: position_controllers/JointPositionController
+  joint: joint3
+
+open_manipulator/joint4_position:
+  type: position_controllers/JointPositionController
+  joint: joint4
+
+open_manipulator/gripper_position:
+  type: position_controllers/JointPositionController
+  joint: gripper
+
+open_manipulator/gripper_sub_position:
+  type: position_controllers/JointPositionController
+  joint: gripper_sub

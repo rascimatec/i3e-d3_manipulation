@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="i3e-d3_manipulation" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Include i3e-d3 URDF -->
+  <xacro:include filename="$(find i3e-d3_description)/urdf/i3e-d3.urdf.xacro"/>
+
+  <!-- Include OpenMANIPULATOR URDF -->
+  <xacro:include filename="$(find i3e-d3_manipulation_description)/urdf/open_manipulator.urdf.xacro"/>
+
+  <!-- Base fixed joint -->
+  <joint name="base_fixed" type="fixed">
+    <origin xyz="0.0 -0.2 0.25" rpy="${PI} 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="link1"/>
+  </joint>
+
+</robot>
