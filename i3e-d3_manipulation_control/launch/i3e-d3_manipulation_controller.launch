@@ -8,7 +8,7 @@
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find i3e-d3_manipulation_control)/config/open_manipulator_controller.yaml" command="load"/>
 
-  <!-- load the controllers -->
+  <!-- Load the controllers -->
   <node name="manipulator_controller_spawner" pkg="controller_manager" 
         type="spawner" respawn="false" output="screen"  
         args="$(arg use_robot_name)/joint_state_controller
