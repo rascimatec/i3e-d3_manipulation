@@ -3,10 +3,10 @@
   
   <arg name="use_robot_name" default="open_manipulator"/>
 
-  <rosparam file="$(find i3e-d3_manipulation_control)/config/gazebo_controller.yaml" command="load"/>
+  <rosparam file="$(find i3e-d3_manipulation_gazebo)/config/om_gazebo_controller.yaml" command="load"/>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find i3e-d3_manipulation_control)/config/open_manipulator_controller.yaml" command="load"/>
+  <rosparam file="$(find i3e-d3_manipulation_gazebo)/config/open_manipulator_controller.yaml" command="load"/>
 
   <!-- Load the controllers -->
   <node name="manipulator_controller_spawner" pkg="controller_manager" 
